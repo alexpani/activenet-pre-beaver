@@ -13,7 +13,7 @@ Import
 @import url(css/vendor/normalize.css);
 /*
 Global Theme Variables
----------------------------------------------------------------------------------------------------- */
+----------------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 /*
@@ -880,7 +880,7 @@ a#primary-nav-link:focus {
   .nav-secondary li {
     float: right; }
 
-/* # #Footer Widgets
+/* # #Footer 
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
   border-top: 1px solid #ecf0f1;
@@ -937,7 +937,7 @@ a#primary-nav-link:focus {
   background: #fff;
   border-top: 1px solid #ecf0f1;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   padding: 20px 0;
   text-align: center; }

@@ -1,6 +1,6 @@
 /*
 Global Theme Variables
----------------------------------------------------------------------------------------------------- */
+----------------------------------------------------------------------------- */
 
 // Palette: flatuicolors.com
 // greens
@@ -81,6 +81,7 @@ $screen-xsmall: 500px;
 // Declare fonts combination. Only the last active will be used.
 
 // Serif+Sans Serif
+
 //@include playfairdisplay-opensans;
 //@include merriweather-montserrat;
 //@include montserrat-merriweather;
@@ -89,6 +90,7 @@ $screen-xsmall: 500px;
 //@include quicksand-cormorantgaramont;
 
 // Sans serif
+
 //@include lato-sourcesanspro;
 @include raleway-opensans;
 //@include roboto-opensans;
