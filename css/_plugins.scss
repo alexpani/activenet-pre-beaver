@@ -1,0 +1,29 @@
+/*
+Plugin Specific Classes
+---------------------------------------------------------------------------------------------------- */
+
+
+/* Simple Social Icons
+--------------------------------------------- */
+
+.simple-social-icons ul li.ssi-facebook a{
+	background: #2D4486 !important;
+}
+.simple-social-icons ul li.ssi-youtube a{
+	background: #BE0018 !important;
+}
+.simple-social-icons ul li.ssi-gplus a{
+	background: #D02D2B !important;
+}
+.simple-social-icons ul li.ssi-twitter a{
+	background: #1da1f2 !important;
+}
+
+.simple-social-icons ul li.ssi-pinterest a{
+	background: #bb0f23 !important;
+}
+
+
+/* Genesis Simple Share. Remove counts
+--------------------------------------------- */
+.sharrre .count { display: none; } .sharrre:hover .share { opacity: 0.7; } .share-small .sharrre .share, .share-small .sharrre:hover .share { width: 65px; border-radius: 3px; } .share-medium .sharrre .share, .share-tall .sharrre .share, .share-medium .sharrre:hover .share, .share-tall .sharrre:hover .share { width: 75px; border-radius: 3px; } .share-outlined.share-small .share, .share-outlined.share-medium .share { border-right: 1px solid !important; }

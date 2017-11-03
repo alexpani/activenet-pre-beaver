@@ -1,0 +1,263 @@
+/* # Site #Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	background: $header;
+	
+	@media only screen and (min-width: 1023px) {		
+	
+		@if $sticky-header == 'yes' {	
+			position: fixed;
+			width: 100%;
+			z-index: 999;
+			border-bottom: $border;
+		}		
+
+	}
+
+}
+
+.sections .site-header,
+.has-home-top-sections .site-header {
+	background: $header;
+	
+	@media only screen and (min-width: 1023px) {		
+	
+		@if $sticky-header == 'yes' {			
+			border: none;
+		
+			@if $sticky-header-transparent == 'yes' {
+				background: transparent;
+				-webkit-transition: all 0.1s ease-in-out;
+				-moz-transition:    all 0.1s ease-in-out;
+				-ms-transition:     all 0.1s ease-in-out;
+				-o-transition:      all 0.1s ease-in-out;
+				transition:         all 0.1s ease-in-out;
+			}
+
+		}		
+
+	}
+
+}
+
+@media only screen and (min-width: 1023px) {
+
+	.site-header.white {
+		background: $header;
+		//border-bottom: $border;
+		@include box-shadow-1();	
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition:    all 0.2s ease-in-out;
+		-ms-transition:     all 0.2s ease-in-out;
+		-o-transition:      all 0.2s ease-in-out;
+		transition:         all 0.2s ease-in-out;
+	}
+
+}
+
+.site-header > .wrap {
+	padding: $header-vertical-padding 0;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	
+	@media only screen and (max-width: 1023px) {
+		display: block;
+		}
+}
+
+//* Header Left-Logo-Right & Header Logo-Mid-Right
+
+.header-left-logo-right.site-header,
+.header-logo-mid-right.site-header {
+
+	.title-area,
+	.widget-area {
+	    width: 31.623931623931625%;
+	    float: left;
+	}
+
+@media only screen and (max-width: 1023px) {
+	 
+    .title-area,
+    .header-left,
+    .header-middle,
+    .widget-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+	.header-left .widget:last-child,
+	.header-middle .widget:last-child {
+	    margin-bottom: 0;
+	}
+	 
+	.search-form {
+	    float: none;
+	    width: auto;
+	    max-width: 250px;
+	}	
+
+}
+
+
+/* ## Default for Title Area 
+--------------------------------------------- */
+
+.title-area {
+	float: left;
+	padding: 10px 0;
+	//width: 300px;
+	width: 33%;
+}
+
+@media only screen and (max-width: 1023px) {
+	 
+    .title-area,
+    .header-left,
+    .header-middle,
+    .widget-area {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .home .widget-area {
+    	margin-top: 0;
+    }    
+	 
+}
+
+.header-image .title-area {
+	//margin: 0 auto;
+	//max-width: 300px;
+	padding: 0;
+}
+
+.header-full-width .title-area {
+	float: none;
+	width: 100%;
+}
+
+.site-title {
+	font-size: 30px;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+	color: $text-color;
+	text-decoration: none;
+}
+
+.header-image .site-title > a {
+	background-position: center !important;
+	background-size: contain !important;
+	float: left;
+	min-height: 80px;
+	width: 100%;
+}
+
+.site-description {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+	display: block;
+	text-indent: -9999px;
+}
+
+/* ## Default for Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	width: 67%;
+	
+	.widget {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 1340px) {
+
+	.site-header .widget-area {
+		//width: 800px;
+	}
+
+}
+
+@media only screen and (max-width: 1200px) {	
+
+	.site-header .widget-area {
+		//width: 620px;
+	}
+
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.site-header .wrap {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.header-widget-area .simple-social-icons ul.alignright {
+		float: none;
+		display: table;
+		margin: 0 auto;
+	}
+
+	.site-header .search-form {
+		margin: 16px auto;
+	}
+
+}
+
+
+/* ## New Wordpress Custom #Logo
+--------------------------------------------- */
+
+.wp-custom-logo .title-area {
+	max-width: none;
+	margin-top: 0;
+}
+
+.wp-custom-logo .site-title {
+	text-indent: 0;
+}
+
+.wp-custom-logo .site-title > a {
+	min-height: 0;
+	//text-align: center;
+}
+
+@media only screen and (max-width: 1023px) {
+	
+	.wp-custom-logo .site-title > a {
+		text-align: center;	   	 
+	}
+}
+
+.custom-logo-link {
+	display: block;
+}
+
+.custom-logo {
+	vertical-align: top;
+}

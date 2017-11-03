@@ -1,0 +1,244 @@
+/*
+* Sections
+* Uso: assegnare la classe sections nel box layput delle pagine del tema in cui
+* si vuole attivare le sezioni
+----------------------------------------------------------------------------- */
+
+//* Classe da assegnare alla pagina nel box layout di Genesis
+.sections {
+
+	.site-inner {
+		max-width: none;
+		padding: 0;
+	}	
+	
+	.entry-title {
+		//display: none;
+	}
+
+	.entry {
+		padding: 0;
+		margin: 0;
+	}
+
+	article.page {
+		padding: 0;
+	}
+
+}
+
+.sections.home-top-sections .wrap,
+.sections.home-bottom-sections .wrap {
+	max-width: none;
+	padding: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+	
+	.full-width .site-inner {
+		padding-left: 0%;
+		padding-right: 0%;
+		}
+
+}
+
+.container {
+	overflow: hidden;
+	
+	p {
+		margin: 0;
+	}
+
+}
+
+.container.relative {
+	position: relative;
+}
+
+.section {
+
+	
+	img {
+		margin-bottom: -8px; // Verificare se è universale. Evita il bordo nelle sezioni al 50%
+		
+		&.alignnone {
+			margin-bottom: -8px;
+		}
+		
+	}
+
+	p {
+		margin: 0; // permette di avere immagini perfettamente allineate in basso nelle section
+	}
+
+	overflow: auto;
+}
+
+//* Permettono di stabilire la larghezza della sezione. Sono legate al tema
+.section.wide {
+	width: 1200px;
+	margin: 0 auto;
+	
+	@media only screen and (max-width: 1340px) {
+		max-width: 1140px;
+		}
+
+	@media only screen and (max-width: 1200px) {
+		max-width: 960px;
+		}	
+
+	@media only screen and (max-width: 1023px) {	
+		max-width: 800px;
+	}
+
+	@media only screen and (max-width: 860px) {
+		max-width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+		}	
+
+}
+
+.section.normal {
+	width: 1140px;
+	//margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@media only screen and (max-width: 1340px) {
+		max-width: 960px;
+		}
+
+	@media only screen and (max-width: 1200px) {
+		max-width: 800px;
+		}	
+
+	@media only screen and (max-width: 1023px) {	
+		max-width: 800px;
+	}
+
+	@media only screen and (max-width: 860px) {
+		max-width: 90%;
+	}
+
+}
+
+.section.narrow {
+	width: 960px;
+	margin: 0 auto;
+
+	@media only screen and (max-width: 1023px) {	
+		max-width: 800px;
+	}
+
+	@media only screen and (max-width: 860px) {
+		max-width: 80%;	
+	}
+
+}
+
+// Arrow
+@mixin arrow($color) {
+		content: "";
+		position: absolute;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid $color;
+		left: 48%;
+}
+
+.container.arrow.bk-color1 {
+
+	&:after {
+		@include arrow($color1);		
+	}
+	
+}
+
+.container.arrow.bk-color1 {
+
+	&:after {
+		@include arrow($color1);		
+	}
+	
+}
+
+.container.arrow.bk-color2 {
+
+	&:after {
+		@include arrow($color2);		
+	}
+	
+}
+
+.container.arrow.bk-color3 {
+
+	&:after {
+		@include arrow($color3);		
+	}
+	
+}
+
+.container.arrow.bk-color4 {
+
+	&:after {
+		@include arrow($color4);		
+	}
+	
+}
+
+.container.arrow.bk-red {
+
+	&:after {
+		@include arrow($red);		
+	}
+	
+}
+
+.container.arrow.bk-green {
+
+	&:after {
+		@include arrow($green);		
+	}
+	
+}
+
+.container.arrow.bk-yellow {
+
+	&:after {
+		@include arrow($yellow);		
+	}
+	
+}
+
+.container.arrow.bk-orange {
+
+	&:after {
+		@include arrow($orange);		
+	}
+	
+}
+
+.container.arrow.bk-blue {
+
+	&:after {
+		@include arrow($blue);		
+	}
+	
+}
+
+.container.arrow.bk-black {
+
+	&:after {
+		@include arrow($black);		
+	}
+	
+}
+
+.container.arrow.bk-white {
+
+	&:after {
+		@include arrow($white);		
+	}
+	
+}

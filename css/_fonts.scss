@@ -1,0 +1,144 @@
+// Font Mixins come suggeriti da https://www.daddydesign.com/wordpress/2017s-top-5-best-google-font-combinations-for-website-development/ e da altri
+
+@mixin raleway-opensans {
+	@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	$font-family: 'Open Sans', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Raleway', serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 500 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 500 !global;
+}
+
+@mixin roboto-opensans {
+	@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	$font-family: 'Open Sans', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Roboto', serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 500 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 500 !global;
+}
+
+@mixin josefinsans-playfairdisplay {
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+	$font-family: 'Playfair Display', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Josefin Sans', sans-serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 400 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 400 !global;
+}
+
+@mixin robotoslab-roboto {
+	@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+	$font-family: 'Roboto', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Roboto Slab', serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $font-family !global;
+	$button-font-weight: 400 !global;
+	$navigation-font-family: $font-family !global;
+	$navigation-font-weight: 400 !global;
+}
+
+@mixin opensanscondensed-opensans {
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	$font-family: 'Open Sans', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Open Sans Condensed', sans-serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 700 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 700 !global;
+}
+
+@mixin oswald-opensans {
+	@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	$font-family: 'Open Sans', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Oswald', sans-serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 500 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 500 !global;
+}
+
+@mixin montserrat-merriweather {
+	@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900');
+	$font-family: 'Merriweather', sans-serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Montserrat', serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 500 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 500 !global;
+}
+
+@mixin merriweather-montserrat {
+	@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900');
+	$font-family: 'Montserrat', sans-serif !global;
+	$font-weight: 300 !global;
+	$title-font-family: 'Merriweather', sans-serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 700 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 700 !global;
+}
+
+@mixin lato-sourcesanspro {
+	@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900');
+	$font-family: 'Source Sans Pro', sans-serif !global;
+	$font-weight: 300 !global;
+	$title-font-family: 'Lato', sans-serif !global;
+	$title-font-weight: 900 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 700 !global;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 700 !global;
+}
+
+@mixin playfairdisplay-opensans {
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	$font-family: 'Open Sans', sans-serif !global;
+	$font-weight: 300 !global;
+	$title-font-family: 'Playfair Display', serif !global;
+	$title-font-weight: 700 !global;
+	$button-font-family: $font-family !global;
+	$button-font-weight: 700;
+	$navigation-font-family: $font-family !global;
+	$navigation-font-weight: 700 !global;
+}
+
+@mixin quicksand-cormorantgaramont { // visto su http://demo.studiopress.com/parallax
+	@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+	@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700');
+	$font-family: 'Cormorant Garamond', serif !global;
+	$font-weight: 400 !global;
+	$title-font-family: 'Quicksand', sans-serif !global;	
+	$title-font-weight: 400 !global;
+	$button-font-family: $title-font-family !global;
+	$button-font-weight: 500;
+	$navigation-font-family: $title-font-family !global;
+	$navigation-font-weight: 500 !global;
+}

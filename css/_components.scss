@@ -1,0 +1,299 @@
+/*
+Poppy Elements
+---------------------------------------------------------------------------------------------------- */
+
+$icon-color: #f39c12 !default;
+$secondary-color: #555 !default;
+$color-light: #fff !default;
+$color-dark: #333 !default;
+
+
+.entry-content .poppy {
+	
+	ul {
+		margin: 0;
+	}
+
+	li, .entry-content ul > li {
+		list-style-type: none !important;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0rem;
+	}
+
+}
+
+
+//* Element li row
+li.ordrered-list-2:nth-of-type(2n+1), 
+li.ordrered-list-3:nth-of-type(3n+1), /* select every 3 item starting from 1 */
+li.ordrered-list-4:nth-of-type(4n+1),
+li.ordrered-list-5:nth-of-type(5n+1),
+li.ordrered-list-6:nth-of-type(6n+1) { 
+    clear: both;
+    margin-left: 0;
+}
+
+.poppy-element-li-row {	
+	
+	ul {
+		margin: 0;
+	}
+
+}
+
+
+//* Icon Box
+.poppy.poppy-icon-box {
+	
+	div {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	.fa {
+		color: $icon-color;		
+	}
+	
+	h3 {
+		margin: 1rem auto;		
+		@include text-medium;
+	}
+	
+	p {
+		font-weight: $bold;
+		line-height: 1.1;		
+	}
+
+	&.text-light,
+	&.color-light {
+
+		h3, p {
+			color: $color-light;
+		}
+
+	}
+
+	&.text-dark,
+	&.color-dark {
+
+		h3, p {
+			color: $color-dark;
+		}
+
+	}
+
+	&.icon-gradient {
+
+		.fa {
+			color: transparent;
+			@include text-gradient();		
+		}
+		
+	}
+
+}
+
+
+
+
+//* Home News Type 1
+.home-news {	
+
+		span {
+			position: relative;
+			top: 30px;
+			left: 0;
+			color: #FFF;
+			background: $primary-color;
+			padding: 4px;
+			font-size: 1.6rem;
+		}		
+
+		img {
+			margin-bottom: -10px;
+			width: 768px;
+			height: auto;
+		}
+
+		p {
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}			
+
+			h3 {
+				text-transform: uppercase;
+				font-size: 1.8rem;
+				height: 6rem;
+				background: $primary-color;
+				padding: 10px;
+				margin: 0;
+				text-align: center;
+				
+				a {
+					color: #fff;
+					text-decoration: none;
+					vertical-align: text-top;
+					
+					&:hover {
+						color: #ccc;
+					}
+				}	
+				
+			}
+
+		}
+
+// Home News Type 2
+.home-news-2 { 
+
+	li > div {
+		border-radius: 4px;
+		-webkit-box-shadow: 1px 1px 1px rgba(115, 115, 115, 0.2);
+		-moz-box-shadow: 1px 1px 1px rgba(115, 115, 115, 0.2);
+		box-shadow: 1px 1px 1px rgba(115, 115, 115, 0.2);
+		background: #fff;
+		display: block;
+	}
+
+	.label {
+		display: block;
+		float: left;
+		//height: 20px;		
+		border-radius: 2px;
+		padding: 0px 15px 0px 15px;    
+		font-size: 1.3rem;
+		font-size: 13px;
+		line-height: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+		z-index: 10;
+		background: $icon-color;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin: -9px 0 0 20px;
+		position: absolute;
+	}
+
+	span {
+		position: relative;
+		top: 29px;
+		left: 0;
+		color: #FFF;
+		background: $icon-color;
+		padding: 4px;
+		font-size: 1.5rem;
+		font-size: 15px;
+		overflow: hidden;
+	}		
+
+	img {		
+		border-bottom-width: 3px;
+		border-bottom-style: solid;
+		border-radius: 4px 4px 0px 0px;
+		border-color: $icon-color;
+	}				
+
+	h3 {        				
+		font-size: 1.8rem;
+		font-size: 18px;				
+		padding: 10px;
+		margin: 0;
+		background: #fff;
+		
+		a {
+			color: $title-color;
+			text-decoration: none;
+			vertical-align: -webkit-baseline-middle;
+			
+			&:hover {
+				color: #ccc;
+			}
+
+		}
+		
+	}
+
+}
+
+
+//* #Tabs & #Accordions. Requires anijs.js
+
+ul.tabs, ul.accordions {
+	margin: 0;
+	margin-bottom: 40px;
+	overflow: hidden;
+	
+ 	li {
+		list-style: none;
+		display: inline;
+	}
+
+}
+
+.tab span {
+	font-family: $title-font-family;
+	font-weight: $title-font-weight;
+	margin: 0 0 -1px 0;
+	border: solid 1px $elements-color;
+	border-bottom: none;
+	padding: 12px 18px;
+	cursor: pointer;
+	display: inline-block;
+	background: $elements-color;
+	
+	&:hover {
+		color: $primary-color;
+		cursor: pointer;
+	}
+
+}
+
+.tabs .tab.active span {
+	border-bottom: none;
+	z-index: 2;
+	color: $primary-color;
+	background: #FFF;
+}
+
+.tab div {
+	display: none;
+	float: left;
+	border-top: 1px solid $elements-color;		
+	padding-top: 10px;
+}
+
+@media only screen and (max-width: 360px) {
+
+	.tab span {
+		width: 100%;
+		border-bottom: 1px solid #fff;
+		border-top: 1px solid #fff;
+	}
+}	
+
+.tabs .tab.active div {
+	display: block; 
+}
+
+.accordions .tab span {
+
+	width: 100%;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+}
+
+.accordions .tab.active span {
+	border-bottom: 1px solid $elements-color;
+	border-top: 1px solid $elements-color;
+	z-index: 2;
+	color: $primary-color;
+	background: #FFF;
+}
+
+.accordions .tab.active div {
+	display: block;
+	padding: 20px 6px;
+}

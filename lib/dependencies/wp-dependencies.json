@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Thumbnail Upscale",
+    "host": "wordpress",
+    "slug": "thumbnail-upscale/thumbnail-upscale.php",
+    "uri": "https://wordpress.org/plugins/thumbnail-upscale/",
+    "branch": "trunk",
+    "optional": false
+  }
+  ,
+  {
+    "name": "Force Regenerate Thumbnails",
+    "host": "wordpress",
+    "slug": "force-regenerate-thumbnails/force-regenerate-thumbnails.php",
+    "uri": "https://wordpress.org/plugins/force-regenerate-thumbnails/",
+    "branch": "trunk",
+    "optional": false
+  }
+  ,
+  {
+    "name": "Animate It!",
+    "host": "wordpress",
+    "slug": "animate-it/edsanimate.php",
+    "uri": "https://wordpress.org/plugins/animate-it/",
+    "branch": "trunk",
+    "optional": false
+  }
+  ,
+  {
+    "name": "Content Blocks (Custom Post Widget)",
+    "host": "wordpress",
+    "slug": "custom-post-widget/custom-post-widget.php",
+    "uri": "https://wordpress.org/plugins/custom-post-widget/",
+    "branch": "trunk",
+    "optional": false
+  }
+   ,
+  {
+    "name": "Genesis Title Toggle",
+    "host": "wordpress",
+    "slug": "genesis-title-toggle/genesis-title-toggle.php",
+    "uri": "https://wordpress.org/plugins/genesis-title-toggle/",
+    "branch": "trunk",
+    "optional": false
+  }
+   ,
+  {
+    "name": "HTML Editor Syntax Highlighter",
+    "host": "wordpress",
+    "slug": "html-editor-syntax-highlighter/html-editor-syntax-highlighter.php",
+    "uri": "https://wordpress.org/plugins/html-editor-syntax-highlighter/",
+    "branch": "trunk",
+    "optional": false
+  }
+   ,
+  {
+    "name": "Plugin Toggle",
+    "host": "wordpress",
+    "slug": "plugin-toggle/plugin-toggle.php",
+    "uri": "https://wordpress.org/plugins/plugin-toggle/",
+    "branch": "trunk",
+    "optional": false
+  }
+]
+

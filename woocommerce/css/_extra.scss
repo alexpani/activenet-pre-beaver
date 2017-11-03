@@ -1,0 +1,163 @@
+/*
+* Active Net Woocommerce Extra v2.0
+* Extra styles for plugin, widgets, etc.
+*/
+
+//* Stylize the default WooCommerce Category Widget
+
+li.cat-parent.current-cat>a, li.current-cat-parent>a, li.current-cat>a {
+	color: $orange;
+	font-weight: bold;
+}
+
+.cat-item {
+	@include border-bottom();
+	ul.children {
+		margin-left: 10px;
+		@include border-top();
+	}
+}
+
+//* Product list in various widget
+.woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a {
+	font-weight: $bold;
+}
+
+//* Add style to short descrition (require modified short-description.php template file)
+.short-description {
+	@include border-bottom;
+	margin-bottom: 15px;
+	p {
+		margin: 0 0 10px;
+	}
+}
+
+//* If icon cart is enabled in buttons, leave this code here
+.single_add_to_cart_button.fa:before {
+padding-right: 10px;
+}
+
+//* Brutal fix to keep same heights in product loop
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	height: 54px;
+	overflow: hidden;	
+}
+
+//* Stylize the orderby selector
+select.orderby {
+    color: $text-color;
+    width: 110%;
+    -webkit-border-radius: 0px;    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../../images/select-arrow.png') no-repeat center right;
+    margin-left: -10%;
+    border: 1px solid #ddd;
+}
+
+//* Stylize WooCommerce Quantity Increment Plugin
+.woocommerce, .woocommerce-page {
+	#quantity,
+	#content .quantity {
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			display: none;
+		}
+	}
+	/**
+	 * Quantity inputs
+	 */
+	.quantity {
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+		zoom: 1;
+		padding-right: 1.1em;
+		display: inline-block;
+
+		input.qty {
+			width: 2.618em;
+			height: 2.2em;
+			float: left;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			border: 2px solid $button-alt-bk;
+			font-weight: 700;
+			border-radius: $border-radius;
+			-moz-appearance: textfield; /* Hide buttons for Firefox 29 and later */
+		}
+
+		/* Hide buttons for opera */
+		noindex:-o-prefocus, input[type=number] {
+			padding-right: 1.2em;
+		}
+
+		.plus,
+		.minus {
+			display: block;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			text-align: center;
+			width: 1.387em;
+			height: 1.12em;
+			text-decoration: none;
+			overflow: visible;
+			text-decoration: none;
+			font-weight: 700;
+			cursor: pointer;
+			color: #fff;
+			border: 1px solid $button-alt-bk;
+			background-color: $button-alt-bk;
+			text-shadow: none;
+			line-height: 1;
+			background-image: none;
+
+			&:hover {
+				background-color: $button-alt-bk - #111;
+			}
+		}
+
+		.plus {
+			top: 0;
+			right: 0;
+			border-bottom: 0;
+			border-radius: $border-radius $border-radius 0 0;
+		}
+
+		.minus {
+			bottom: 0;
+			right: 0;
+			border-radius: 0 0 $border-radius $border-radius;
+		}
+	}
+}
+
+//* Stylize the search box
+.widget_product_search {	
+	.button-search:before {
+		content: "\f002";
+		display: block;
+		font-family: "FontAwesome";
+		width: 10%;
+		text-align: center;
+		color: #fff;
+		padding: 0px 10px;
+		border-radius: $border-radius;
+	}
+	input.search-box {
+		width: 250px;
+		border: 1px solid $button-bk;
+		padding: 7px 7px 9px;
+		border-radius: $border-radius;
+		}
+}
+
+@media only screen and (max-width: 860px) {
+	.widget_product_search {		
+		input.search-box {
+			width: 180px;
+				}
+		}
+}

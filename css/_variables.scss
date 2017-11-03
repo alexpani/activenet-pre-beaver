@@ -1,0 +1,213 @@
+/*
+Global Theme Variables
+---------------------------------------------------------------------------------------------------- */
+
+// Palette: flatuicolors.com
+// greens
+$turquoise:     #1abc9c;
+$emerald:       #2ecc71;
+$greensea:      #16a085;
+$nephritis:     #27ae60;
+// blues
+$peterriver:    #3498db;
+$belizehole:    #2980b9;
+$wetasphalt:    #34495e;
+$midnightblue:  #2c3e50;
+// purples
+$amethyst:      #9b59b6;
+$wisteria:      #8e44ad;
+// oranges
+$sunflower:     #f1c40f;
+$carrot:        #e67e22;
+$orange:        #f39c12;
+$pumpkin:       #d35400;
+// reds
+$alizarin:      #e74c3c;
+$pomegranate:   #c0392b;
+// grays
+$clouds:        #ecf0f1;
+$silver:        #bdc3c7;
+$concrete:      #95a5a6;
+$asbestos:      #7f8c8d;
+
+// Deafult colors
+$red: $alizarin;
+$green: $emerald;
+$yellow: $sunflower;
+$orange: $orange;
+$blue: $belizehole;
+$black: #000;
+$white: #fff;
+
+// Theme colors
+$color1: $peterriver;
+$color2: $sunflower;
+$color3: $pumpkin;
+$color4: $clouds;
+
+// Accent colors, i.e. links, buttons... primary and secondary may coincides
+$primary-color: $peterriver; // for primary links and buttons
+$primary-color-alt: $belizehole; // hover color for primary
+$secondary-color: $wetasphalt; // for secondary links and buttons
+$secondary-color-alt: $midnightblue; // hover color for secondary
+
+$elements-color: $clouds; // usato nei bordi, spearatori, ecc..
+
+// Colori usati negli helper
+$color-light: #eee !default;
+$color-dark: #333 !default;
+
+// Woocommerce colors
+$sale-color: $alizarin;
+$price-color: $nephritis;
+$star-color: $orange;
+$button-bk: $orange; // buttons on product, loop, cart
+$button-color: $white; // text color on this button
+$button-alt-bk: $nephritis; // cart button on single product page, proceed to ceckout in cart page
+$button-alt-color: $white; // text color on this button
+$message-color: $nephritis;
+$info-color: $peterriver;
+$error-color: $alizarin;
+
+// Media queries breakpoints
+$screen-huge: 1340px;
+$screen-large: 1200px;
+$screen-medium: 1023px;
+$screen-small: 639px;  // 639 fino a Galaxy S6 e Iphone 6, orizzontali, esclusi
+$screen-xsmall: 500px;
+
+// Typography
+
+// Declare fonts combination. Only the last active will be used.
+
+// Serif+Sans Serif
+//@include playfairdisplay-opensans;
+//@include merriweather-montserrat;
+//@include montserrat-merriweather;
+//@include robotoslab-roboto;
+//@include josefinsans-playfairdisplay;
+//@include quicksand-cormorantgaramont;
+
+// Sans serif
+//@include lato-sourcesanspro;
+@include raleway-opensans;
+//@include roboto-opensans;
+//@include oswald-opensans;
+//@include opensanscondensed-opensans;
+
+$font-size: 1.8rem;
+$text-line-height: 1.6;
+$text-color: #333;
+$title-line-height: 1.2;
+$title-color: #555;
+$title-transform: none;
+$bold: $font-weight;
+$strong: $bold;
+$h1: $font-size*1.8;
+$h2: $font-size*1.4;
+$h3: $font-size*1.2;
+$h4: $font-size*1.1;
+$title-margin: 0 0 2rem; 			// in generale
+$entry-title-margin: 4rem 0 2rem;   // nei contenuti
+$paragraph-margin: 0 0 1rem;
+
+$text-xsmall: $font-size*.8;
+$text-small: $font-size*.9;
+$text-medium: $font-size*1.2;
+$text-large: $font-size*2.2;
+$text-xlarge: $font-size*3;
+$text-xxlarge: $font-size*4;
+
+// Various 
+$body-background: /*url('images/bk.png')*/ #fff; // Bypassed if customizer is in use
+$site-container-background: $clouds;
+$content-background-color: $white;
+$padding-small: 15px;
+$padding-medium: 50px;
+$padding-large: 100px;
+$padding-xlarge: 200px;
+$border: 1px solid $elements-color;
+$border-radius: 3px;
+$icon-color: $orange;
+$border-test: 'no'; // Enable visible borders for test purposes. yes or no
+
+// Effects
+$gradient-start:   $wetasphalt;
+$gradient-end:  $belizehole;
+$gradient-angle: 135deg;
+$gradient-text-start:   $sunflower;
+$gradient-text-end:  $orange;
+$gradient-text-angle: 315deg;
+$overlay-start:   $amethyst;
+$overlay-end:  $midnightblue;
+$overlay-angle: 135deg;
+$overlay-opacity: 0.5;
+
+// Buttons
+$button-font-family: $title-font-family;
+$button-font-weight: 500;
+$button-font-size: $font-size;
+$button-background: $primary-color;
+$button-background-hover: $primary-color-alt;
+$button-color: $white;
+$button-alt-background: $secondary-color;
+$button-alt-background-hover: $secondary-color-alt;
+$button-alt-color: $white;
+$button-shadow: 'yes'; // yes or no. Alternative, add button-shadow class to single button
+
+// Structure
+$site-inner-padding-top: 40px;
+$sidebar-spacing: 20px;
+$sidebar-widget-padding: 10px;
+$sidebar-widget-margin-bottom: 10px;
+$sidebar-primary-width: 240px; // default 360px
+$sidebar-secondary-width: 200px; // default 180px
+$sidebar-font-size: $font-size;
+$shop-padding: 20px;
+$page-padding: 20px;
+$post-padding: $page-padding;
+// Dont't touch these!
+$one-sidebar-content-width: 1280px - $sidebar-primary-width - $sidebar-spacing; // default 880px
+$two-sidebar-content-width: ($one-sidebar-content-width - $sidebar-secondary-width - $sidebar-spacing ); // default 660px
+$two-sidebar-wrap-width: 1280px - $sidebar-secondary-width - $sidebar-spacing;
+
+// Header
+$header: /*url('images/bk.png')*/ #fff;
+$header-vertical-align: center; // center al centro, flex-end in basso
+$header-vertical-padding: 10px;
+$sticky-header: 'no'; // Attiva sticky header. Se su no disabilitare l'import del js in function.php altrimenti tutto in site inner va giù
+$sticky-header-transparent: 'yes';
+$sticky-header-background-light: 'yes'; // indicare se lo sfondo sotto al menu è chiaro
+
+// Navigation
+$navigation-font-family: $title-font-family;
+$navigation-font-weight: 500;
+$primary-navigation-font-size: $font-size;
+$primary-nav-link: $white;
+$primary-nav-bk: $color1;
+$primary-nav-hover: $blue;
+$secondary-navigation-font-size: $font-size;
+$secondary-nav-link:$text-color;
+$secondary-nav-bk: /*url('images/bk.png')*/ #f4f4f4;
+$secondary-nav-hover: $orange;
+
+$header-navigation-font-size: 1.4rem;
+$header-nav-link: $color-dark;
+$header-nav-hover: $primary-color-alt;
+$header-nav-underline: 'yes'; // style of the menu items, yes or no
+$responsive-nav-bk: $white;
+$responsive-nav-link: $secondary-color;
+$responsive-nav-toggle: $text-color;
+$side-menu: 'yes'; // Occorre anche configurare il menu utilizzato in jquery.sidr.min.init.js
+
+// Footer
+$footer-widgets: #f4f4f4;
+$footer-widgets-title: $title-color;
+$footer-widgets-text: $text-color;
+$footer: $white;
+$footer-text: $text-color;
+
+// Functions
+@function remtopx ($rem) {
+	@return $rem / 1rem * 10px;
+}

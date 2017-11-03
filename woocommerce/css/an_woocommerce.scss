@@ -1,0 +1,534 @@
+/**
+ * Poppy Framework 
+ * woocommerce.scss 
+ * This stylsheet overrides the default Woocommerce stylesheets.
+ * 
+ * For plugin styles, see _extra.scss
+ * 
+ * Rev 2.0 201704
+ */
+
+/**
+ * Imports
+ */
+
+@import "../../css/fonts"; // font combinations
+@import "../../css/variables"; // Global variables
+@import "../../css/mixins"; // Global Mixins
+@import "extra"; // Extra classes for plugin, widget, ecc.
+
+@mixin clearfix() {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+/**
+ * Main WooCommerce styles
+ */
+.woocommerce {
+
+	//added
+	#content, .content {
+		background: $content-background-color;
+		padding: $shop-padding;
+	}
+	//added
+	.woocommerce-message { 
+		border-top-color: $message-color;
+
+		&:before {
+			content: "\e015";
+			color: $message-color;
+		}
+	}
+
+	.woocommerce-info {
+		border-top-color: $info-color;
+
+		&:before {			
+			color: $info-color;
+		}
+	}
+
+	.woocommerce-error {
+		border-top-color: $error-color;
+
+		&:before {
+			content: "\e016";
+			color: $error-color;
+		}
+	}
+
+	/**
+	 * Product Page
+	 */
+
+	div.product {
+		//added
+		.woocommerce-product-gallery__image {
+		margin-top: .5em;	
+		}	
+		//added
+		.product_meta {
+			margin-bottom: 1em;
+		}
+
+		span.price,
+		p.price {
+			color: $price-color;
+			font-weight: 500;
+			font-size: 1.5em;
+
+			ins {				
+				text-decoration: none;
+			}
+		}		
+
+		.out-of-stock {
+			color: $error-color;
+		}
+
+
+/* Tabs
+--------------------------------------------- */
+
+		.woocommerce-tabs {
+			ul.tabs {				
+				padding: 0;				
+				border-top: 1px solid #ddd;
+
+				li {
+					border: none;
+					background: none;
+					border-radius: 0;					
+					margin: 0 10px;
+					padding: 0 0em;
+
+					a {						
+						color: $primary-color;						
+						text-transform: uppercase;
+
+						&:hover {
+							text-decoration: none;
+							color: $primary-color-alt;
+						}
+					}
+
+					&.active {						
+						border-top: 4px solid;
+						background: none;
+						border-bottom-color: none;
+					}									
+
+					&:after {
+						right: 0px;						
+					}
+				}
+
+				&:before {					
+					border-bottom: none;					
+				}
+			}
+			
+		}		
+
+		form.cart {
+			margin-bottom: 0em;
+			
+			.button {
+				border-radius: $border-radius;
+			}
+		}
+	}
+
+	span.onsale {		
+		padding: .2em .5em;
+		text-transform: uppercase;			
+		top: 1em;
+		left: -.5em;
+		//line-height: 7; // se lo vogliamo tondo	
+		border-radius: 0 ;	
+		background-color: $sale-color;
+		color: #fff;		
+	}
+
+	/**
+	 * Product loops
+	 */
+	
+	ul.products {
+		li.product {
+			text-align: center;
+			@include box_shadow();
+			
+			.onsale {
+				top: 0;
+				right: 0;
+				left: auto;
+				margin: -.5em -.5em 0 0;
+				font-size: .7em;
+				padding: 0em .5em;
+			}
+
+			h3,
+			.woocommerce-loop-product__title,
+			.woocommerce-loop-category__title {								
+				font-size: .9em;
+				text-transform: uppercase;
+			}
+
+			a img {				
+				border-bottom: 1px solid #ddd;
+			}		
+
+			.star-rating {
+				margin: 0 auto;
+			}
+
+			.button {
+				margin-top: 0em;
+			}
+
+			// This require the content-product.php template override
+			// added
+			.category {
+				margin: .3em;
+				margin-top: .3em;
+				font-size: .7em;
+				text-transform: uppercase;
+				line-height: 1;
+
+			}
+
+			.price {
+				color: $price-color;
+				margin-bottom: .3em;
+				margin-top: .3em;
+				font-size: 1.2em;
+				text-align: center;
+
+				del {					
+					opacity: 0.8;
+					font-size: .8em;
+					display: inline;
+				}
+
+				ins {					
+					text-decoration: none;
+				}
+				
+			}
+		}
+	}
+
+	.woocommerce-result-count {
+		margin: 0 0 1em;
+	}
+
+	.woocommerce-ordering {
+		margin: 0 0 2em;
+	}
+
+	nav.woocommerce-pagination {
+		text-align: center;
+
+		ul {			
+			border: $border;			
+
+			li {
+				border-right: 1px solid #ddd;
+			}
+		}
+	}
+
+	/**
+	 * Buttons
+	 */
+	a.button,
+	button.button,
+	input.button,
+	#respond input#submit {
+		text-transform: uppercase;
+		margin-bottom: 1em;
+		background-color: $button-bk;
+		color: $button-color;
+		border-radius: $border-radius;	
+
+		@if $button-shadow == 'yes' {
+		@include button-shadow ($button-background);
+		}
+		
+		font-weight: $button-font-weight;
+		
+		&:hover {
+			background-color: $button-bk - #111;			
+			color: $button-color;
+		}
+
+		&.alt {
+			background-color: $button-alt-bk;
+			color: $button-alt-color;
+
+			&:hover {
+				background-color: $button-alt-bk - #111;
+				color: $button-alt-color;
+			}
+
+			&.disabled,
+			&:disabled,
+			&:disabled[disabled],
+			&.disabled:hover,
+			&:disabled:hover,
+			&:disabled[disabled]:hover {
+				background-color: #ddd;
+				color: $text-color;
+			}
+		}
+
+		&:disabled,
+		&.disabled,
+		&:disabled[disabled] {
+
+			&:hover {
+				background-color: $button-alt-bk;
+			}
+		}
+	}	
+
+	/**
+	 * Reviews
+	 */
+	#reviews {
+		h2 small {
+			color: $text-color;
+
+			a {				
+				color: $text-color;
+			}
+		}
+
+		#comments {			
+
+			ol.commentlist {
+
+				li {					
+
+					.meta {
+						color: $text-color;
+					}
+
+					img.avatar {						
+						width: 48px;						
+						background: #eee;
+						border: $border;						
+					}
+
+					.comment-text {						
+						border: $border;
+						border-radius: $border-radius;
+					}
+				}				
+
+				#respond {
+					border: $border;
+					border-radius: $border-radius;					
+				}
+			}			
+		}
+	}
+
+	/**
+	 * Star ratings
+	 */
+	.star-rating {		
+
+		&:before {			
+			color: $star-color;			
+		}
+
+		span {			
+			color: $star-color;			
+		}		
+	}
+
+
+	/**
+	 * Cart sidebar
+	 */
+	ul.cart_list,
+	ul.product_list_widget {
+		list-style: none outside;
+		padding: 0;
+		margin: 0;		
+
+		li {			
+			
+			span.woocommerce-Price-amount {
+			color: $price-color;
+			}			
+		}
+	}
+
+	&.widget_shopping_cart,
+	.widget_shopping_cart {
+		.total {
+			border-top: 1px solid #ddd;				
+		}		
+	}
+
+	/**
+	 * Forms
+	 */
+	
+	form.login,
+	form.checkout_coupon,
+	form.register {
+		border: $border;		
+		border-radius: $border-radius;
+	}	
+
+	/**
+	 * Order page
+	 */
+	.order_details {
+		@include clearfix();
+		margin: 0 0 1.5em;
+		list-style: none;
+
+		li {			
+			border-right: 1px dashed #ddd;			
+		}
+	}
+
+	
+	/**
+	 * Price filter widget
+	 */
+	.widget_price_filter {
+		
+		.ui-slider .ui-slider-handle {			
+			background-color: $price-color;			
+		}
+
+		.ui-slider .ui-slider-range {			
+			background-color: $price-color;
+		}
+
+		.price_slider_wrapper .ui-widget-content {			
+			background-color: #ddd;
+		}		
+	}
+}
+
+/**
+ * Cart/checkout page
+ */
+.woocommerce-cart,
+.woocommerce-checkout,
+#add_payment_method {
+	table.cart {		
+
+		td.actions {
+			.coupon {
+				.input-text {					
+					border: 1px solid $button-bk;
+					padding: 9px 6px 8px;					
+				}
+			}
+		}		
+	}
+
+	.wc-proceed-to-checkout {
+		
+		a.checkout-button {			
+			padding: 0 0 1em;
+		}
+	}
+
+	.cart-collaterals {		
+
+		.cart_totals {
+			p {
+				small {
+					color: $text-color;					
+				}
+			}
+
+			table {
+				
+				small {
+					color: $text-color;
+				}				
+			}
+
+			.discount td {
+				color: $sale-color;
+			}
+
+			tr td,
+			tr th {
+				border-top: 1px solid #ddd;
+			}
+		}
+
+	}
+	.checkout {		
+
+		.create-account small {			
+			color: $text-color;
+		}		
+	}
+
+	#payment {
+		background: #fff;
+		border-radius: $border-radius;
+		border: $border;
+
+		ul.payment_methods {			
+			border-bottom: 1px solid #ddd;			
+		}
+
+		div.payment_box {			
+			background-color: $info-color;
+			color: #fff;
+
+			input.input-text, textarea {
+				border-color: #ddd;
+				border-top-color: #ddd;
+			}
+
+			::-webkit-input-placeholder {
+				color: #ddd;
+			}
+
+			:-moz-placeholder {
+				color: #ddd;
+			}
+
+			:-ms-input-placeholder {
+				color: #ddd;
+			}
+
+			span.help {				
+				color: $text-color;
+			}
+
+			&::before {				
+				border: 1em solid $info-color; /* arrow size / color */
+				border-right-color: transparent;
+				border-left-color: transparent;
+				border-top-color: transparent;				
+			}
+		}
+		
+	}
+}

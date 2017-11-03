@@ -1,0 +1,169 @@
+/* ## Column Classes (Genesis default)
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds,
+.one-fifth {
+	float: left;
+	margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65.81196581196582%;
+}
+
+.one-fourth {
+	width: 23.076923076923077%;
+}
+
+.three-fourths {
+	width: 74.35897435897436%;
+}
+
+.one-sixth {
+	width: 14.52991452991453%;
+}
+
+.five-sixths {
+	width: 82.90598290598291%;
+}
+
+.one-fifth {
+	width: 17%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+@media only screen and (max-width: $screen-small) { // IPhone 6 orizzontale
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third, 
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		display: block;
+		margin: 0;
+		width: 100%;
+	}
+
+	.one-fourth, .three-fourths, .two-fourths { // Ok
+		display: block;
+		margin: 0;
+		width: 50%;
+	}
+
+	.third {
+		clear: both;
+		margin-left: 0;
+	}
+}
+
+
+/* ## Column Classes Extended (no left margin)
+--------------------------------------------- */
+
+.five-sixths.ext,
+.four-sixths.ext,
+.one-fourth.ext,
+.one-half.ext,
+.one-sixth.ext,
+.one-third.ext,
+.three-fourths.ext,
+.three-sixths.ext,
+.two-fourths.ext,
+.two-sixths.ext,
+.two-thirds.ext {
+	float: left;
+	margin-left: 0;
+}
+
+.one-half.ext,
+.three-sixths.ext,
+.two-fourths.ext{
+	width: 50%;
+}
+
+.one-third.ext,
+.two-sixths.ext {
+	width: 33.33%;
+}
+
+.four-sixths.ext,
+.two-thirds.ext {
+	width: 66.66%;
+}
+
+.one-fourth.ext {
+	width: 25%;
+}
+
+.three-fourths.ext {
+	width: 75%;
+}
+
+.one-sixth.ext {
+	width: 16.66%;
+}
+
+.five-sixths.ext {
+	width: 83.33%;
+}
+
+//* Verificare bene come si comportano le varie conf.
+//* Se ok, trasponi anche alle  classi colonna di default
+@media only screen and (max-width: $screen-small) { // IPhone 6 orizzontale
+	.five-sixths,
+	.four-sixths,	
+	.one-half.ext, // Ok
+	.one-sixth,
+	.one-third.ext, // Ok	
+	.three-sixths,	
+	.two-sixths,
+	.two-thirds.ext {
+		display: block;
+		margin: 0;
+		width: 100%;
+	}
+
+	.one-fourth.ext, .three-fourths.ext, .two-fourths.ext { // Ok
+		display: block;
+		margin: 0;
+		width: 50%;
+	}
+
+	.third {
+		clear: both;
+		margin-left: 0;
+	}
+	
+}
